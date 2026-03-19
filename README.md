@@ -58,7 +58,7 @@ The service will start automatically and keep running in the background.
 ### Check service status
 
 ```bash
-systemctl --user status portal.service
+systemctl --user status portal-reauth.service
 ```
 
 ---
@@ -66,7 +66,7 @@ systemctl --user status portal.service
 ### View logs
 
 ```bash
-journalctl --user -u portal.service -f
+journalctl --user -u portal-reauth.service -f
 ```
 
 ---
@@ -74,7 +74,7 @@ journalctl --user -u portal.service -f
 ### Stop service
 
 ```bash
-systemctl --user stop portal.service
+systemctl --user stop portal-reauth.service
 ```
 
 ---
@@ -82,7 +82,7 @@ systemctl --user stop portal.service
 ### Restart service
 
 ```bash
-systemctl --user restart portal.service
+systemctl --user restart portal-reauth.service
 ```
 
 ---
