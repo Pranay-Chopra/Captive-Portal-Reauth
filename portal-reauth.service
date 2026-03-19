@@ -1,0 +1,11 @@
+[Unit]
+Description=Portal Reauth Daemon
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 %h/.local/bin/portal.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target
