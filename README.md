@@ -99,11 +99,18 @@ systemctl --user restart portal-reauth.service
 
 ## Dependencies
 
-Installed automatically:
-
+PIP dependencies:
 - playwright
+- systemd-python
+- requests
 
-Also runs:
+Playwright dependencies:
+- libicu74
+- libflite1
+- libxml2
+
+The script tries to manage the dependencies for you, but manual intervention may be needed.
+It does this by pip-installing and then running:
 
 ```bash
 playwright install
