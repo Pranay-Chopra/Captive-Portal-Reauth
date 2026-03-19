@@ -1,6 +1,6 @@
 install:
 	@echo "Checking and Installing Python Dependencies: "; \
-	python3 -m pip install playwright systemd-python requests; \
+	python3 -m pip install playwright systemd-python requests --break-system-packages; \
 	playwright install-deps; \
 	playwright install; \
 	@echo "Enter username: " \
