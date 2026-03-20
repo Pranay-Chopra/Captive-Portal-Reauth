@@ -1,10 +1,10 @@
 install:
 	@echo "Checking and Installing Python Dependencies: "; \
 	python3 -m pip install playwright systemd-python requests --break-system-packages; \
-	playwright install-deps; \
-	playwright install; \
-	@echo "Enter username: " \
-	@read user; \
+	~/.local/bin/playwright install-deps; \
+	~/.local/bin/playwright install; \
+	echo "Enter username: " \
+	read user; \
 	echo "Enter password: "; \
 	read -s pass; \
 	sed "s|USERNAME_PLACEHOLDER|$$user|g; s|PASSWORD_PLACEHOLDER|$$pass|g" portal.py > portal_configured.py; \
